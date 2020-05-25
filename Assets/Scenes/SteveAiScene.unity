@@ -121,6 +121,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: f89901fb779504643a05e58d86ae2b65, type: 2}
+--- !u!1 &106769102 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4052932260088883910, guid: 434698d99298f4c4480d31f6fe942516,
+    type: 3}
+  m_PrefabInstance: {fileID: 1688068811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &106769103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106769102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918963c5305b6f349b80598e7aaae03c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &247540849
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,13 +1013,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9c135856ede4ba4e84623ff3cb17a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPos: {fileID: 832218533}
+  playerPos: {fileID: 965197883}
   agent: {fileID: 1306197693}
   searchInterval: 5
   flashFreezeDistance: 4.5
   huntDistance: 5
   flashLightObject: {fileID: 1392011516}
   freezeAI: {fileID: 1306197695}
+  playerDead: {fileID: 106769103}
 --- !u!114 &1306197695
 MonoBehaviour:
   m_ObjectHideFlags: 0

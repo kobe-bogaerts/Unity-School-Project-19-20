@@ -10,6 +10,7 @@ public class SteveAI : MonoBehaviour
     public float huntDistance = 5f;
     public GameObject flashLightObject;
     public FreezeAI freezeAI;
+    public PlayerDead playerDead;
 
     float timer = 0.0f;
     void Update()
@@ -34,6 +35,11 @@ public class SteveAI : MonoBehaviour
                 print("Steve freeze");
                 freezeAI.Freeze();
             }
+        }
+
+        if(Vector3.Distance(transform.position, playerPos.position) < 1.0f)
+        {
+            playerDead.Kill();
         }
     }
 }
