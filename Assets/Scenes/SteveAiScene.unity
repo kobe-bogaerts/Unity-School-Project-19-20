@@ -680,6 +680,11 @@ PrefabInstance:
       propertyPath: playerDead
       value: 
       objectReference: {fileID: 106769103}
+    - target: {fileID: 9213214276524320105, guid: 177a07638bb8a954d99364d867c8d1e9,
+        type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 9213214277367815129}
     - target: {fileID: 9213214276524417970, guid: 177a07638bb8a954d99364d867c8d1e9,
         type: 3}
       propertyPath: m_Name
@@ -742,3 +747,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 177a07638bb8a954d99364d867c8d1e9, type: 3}
+--- !u!1 &9213214277367815128 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9213214276524417970, guid: 177a07638bb8a954d99364d867c8d1e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 9213214277367815127}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &9213214277367815129
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213214277367815128}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
