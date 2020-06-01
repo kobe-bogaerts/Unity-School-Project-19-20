@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 924546188}
   m_Layer: 0
   m_Name: menu manager
-  m_TagString: Untagged
+  m_TagString: menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

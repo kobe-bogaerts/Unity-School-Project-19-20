@@ -9,11 +9,18 @@ public class PlayerDead : MonoBehaviour
     public bool HasWrench { get { return hasWrench; } }
     public Image wrenchIcon;
     public Sprite[] sprites;
+    private menuHandler menuHandler;
 
-  public void Kill()
+    void Start()
+    {
+        menuHandler = GameObject.FindGameObjectWithTag("menu").GetComponent<menuHandler>();
+    }
+
+    public void Kill()
     {
         print("player is dead");
         // do something 
+        menuHandler.Dead();
     }
 
   public void setWrench(bool gotWrench)

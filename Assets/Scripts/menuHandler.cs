@@ -12,28 +12,39 @@ public class menuHandler : MonoBehaviour
     
     void Awake()
     {
+        if (GameObject.FindGameObjectsWithTag("menu").Length > 1)
+            Destroy(gameObject);
         DontDestroyOnLoad(gameObject);    
     }
 
     public void Quit()
     {
-        Application.Quit();
+        if (Application.isEditor)
+            UnityEditor.EditorApplication.isPlaying = false;
+        else
+            Application.Quit();
     }
     
     public void Dead()
     {
         title.text = "You died!";
         actionButtonText.text = "Restart Game";
-        SceneManager.LoadScene(0);
-        canvas.enabled = true;
+        loadMenu();
     }
 
     public void Finish()
     {
         title.text = "You Won!";
         actionButtonText.text = "Restart Game";
+        loadMenu();
+    }
+
+    private void loadMenu()
+    {
         SceneManager.LoadScene(0);
         canvas.enabled = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void actionButtonClick()
