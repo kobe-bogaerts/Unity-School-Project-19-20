@@ -873,7 +873,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 72, y: 79.4}
+  m_AnchoredPosition: {x: 72, y: 110}
   m_SizeDelta: {x: 463.33, y: 35.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1115927966
@@ -905,9 +905,9 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Welcome to our NAMEOFGAME
+  m_Text: Welcome to NAMEOFGAME
 --- !u!222 &1115927967
 CanvasRenderer:
   m_ObjectHideFlags: 0

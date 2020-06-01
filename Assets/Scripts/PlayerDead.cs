@@ -19,7 +19,6 @@ public class PlayerDead : MonoBehaviour
     public void Kill()
     {
         print("player is dead");
-        // do something 
         menuHandler.Dead();
     }
 
