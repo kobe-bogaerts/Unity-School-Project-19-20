@@ -34,7 +34,7 @@ public class menuHandler : MonoBehaviour
 
     public void Finish()
     {
-        title.text = "You have fixed the car safely. Drive of in to the sunset!";
+        title.text = "You have fixed the car safely. Drive off in to the sunset!";
         actionButtonText.text = "Restart Game";
         loadMenu();
     }
