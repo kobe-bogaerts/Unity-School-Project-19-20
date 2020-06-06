@@ -11,6 +11,7 @@ public class SteveAI : MonoBehaviour
     public GameObject flashLightObject;
     public FreezeAI freezeAI;
     public PlayerDead playerDead;
+    public Animator animator;
 
     float timer = 0.0f;
     void Update()
@@ -20,10 +21,15 @@ public class SteveAI : MonoBehaviour
             agent.SetDestination(playerPos.position);
             timer = 0;
         }
+        else
+        {
+            animator.SetBool("inSightOfPlayer", false);
+        }
         timer += Time.deltaTime;
 
-        if(Vector3.Distance(transform.position, playerPos.position) < huntDistance)
+        if (Vector3.Distance(transform.position, playerPos.position) < huntDistance)
         {
+            animator.SetBool("inSightOfPlayer", false);
             agent.SetDestination(playerPos.position);
         }
 
@@ -32,13 +38,15 @@ public class SteveAI : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, flashLightObject.transform.position) < flashFreezeDistance)
             {
+                animator.SetBool("inSightOfPlayer", true);
                 print("Steve freeze");
                 freezeAI.Freeze();
             }
         }
 
-        if(Vector3.Distance(transform.position, playerPos.position) < 1.0f)
+        if (Vector3.Distance(transform.position, playerPos.position) < 1.0f)
         {
+            animator.SetBool("inSightOfPlayer", true);
             playerDead.Kill();
         }
     }
