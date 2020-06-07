@@ -6,6 +6,7 @@ TagManager:
   tags:
   - pickUp
   - menu
+  - smoke
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,7 @@ public class menuHandler : MonoBehaviour
     public Text title;
     public Text actionButtonText;
     public Canvas canvas;
+    public bool isFinished = false;
     
     void Awake()
     {
@@ -34,6 +35,7 @@ public class menuHandler : MonoBehaviour
 
     public void Finish()
     {
+        isFinished = true;
         title.text = "You have fixed the car safely. Drive off in to the sunset!";
         actionButtonText.text = "Restart Game";
         loadMenu();
@@ -49,6 +51,7 @@ public class menuHandler : MonoBehaviour
 
     public void actionButtonClick()
     {
+        isFinished = false;
         StartCoroutine("Fade");
     }
 

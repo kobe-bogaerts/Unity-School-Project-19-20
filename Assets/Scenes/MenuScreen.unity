@@ -342,6 +342,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147922256}
   m_CullTransparentMesh: 0
+--- !u!1 &199584135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 5a97962f7d5ba4df0823334b52c7c02c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1867683674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &199584136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199584135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b18ce9840c6856439b17476c732f46f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoke: {fileID: 199584135}
 --- !u!1001 &296456601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -907,6 +926,7 @@ MonoBehaviour:
   title: {fileID: 1115927966}
   actionButtonText: {fileID: 515707366}
   canvas: {fileID: 1020738564}
+  isFinished: 0
 --- !u!4 &924546189
 Transform:
   m_ObjectHideFlags: 0
@@ -1119,6 +1139,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 3}
       propertyPath: m_Name
       value: WhiteSmoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 3}
+      propertyPath: m_TagString
+      value: smoke
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 3}
       propertyPath: m_LocalPosition.x
