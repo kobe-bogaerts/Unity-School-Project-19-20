@@ -14,6 +14,7 @@ public class SteveAI : MonoBehaviour
     public Animator animator;
 
     float timer = 0.0f;
+    float timer2 = 0.0f;
     void Update()
     {
         if (timer > searchInterval)
@@ -29,8 +30,16 @@ public class SteveAI : MonoBehaviour
 
         if (Vector3.Distance(transform.position, playerPos.position) < huntDistance)
         {
-            animator.SetBool("inSightOfPlayer", false);
-            agent.SetDestination(playerPos.position);
+            if(timer > 1f)
+            {
+                animator.SetBool("inSightOfPlayer", false);
+                agent.SetDestination(playerPos.position);
+                timer2 = 0;
+            }
+            else
+            {
+                timer2 += Time.deltaTime;
+            }
         }
 
         //check if light is on
