@@ -19,7 +19,8 @@ public class PlayerDead : MonoBehaviour
     public void Kill()
     {
         print("player is dead");
-        menuHandler.Dead();
+        if(menuHandler != null)
+            menuHandler.Dead();
     }
 
   public void setWrench(bool gotWrench)

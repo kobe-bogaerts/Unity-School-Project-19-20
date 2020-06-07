@@ -54,10 +54,10 @@ public class menuHandler : MonoBehaviour
 
     IEnumerator Fade()
     {
-        while(Camera.main.fieldOfView > 1)
+        while(Camera.main.fieldOfView >= 1)
         {
-            Camera.main.fieldOfView -= 5;
-            yield return new WaitForSeconds(0.1f);
+            Camera.main.fieldOfView -= 1;
+            yield return new WaitForSeconds(0.02f);
         }
         canvas.enabled = false;
         SceneManager.LoadScene(1);
