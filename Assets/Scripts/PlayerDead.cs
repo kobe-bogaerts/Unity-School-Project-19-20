@@ -10,6 +10,7 @@ public class PlayerDead : MonoBehaviour
     public Image wrenchIcon;
     public Sprite[] sprites;
     private menuHandler menuHandler;
+    public AudioSource deadAudio;
 
     void Start()
     {
@@ -18,9 +19,10 @@ public class PlayerDead : MonoBehaviour
 
     public void Kill()
     {
+        deadAudio.Play(0);
+        StartCoroutine("EndSound");
         print("player is dead");
-        if(menuHandler != null)
-            menuHandler.Dead();
+        
     }
 
   public void setWrench(bool gotWrench)
@@ -34,6 +36,13 @@ public class PlayerDead : MonoBehaviour
         {
             wrenchIcon.sprite = sprites[1];
         }
+    }
+
+    IEnumerator EndSound()
+    {
+        yield return new WaitForSeconds(1.5f);
+        if(menuHandler != null)
+            menuHandler.Dead();
     }
     
 }

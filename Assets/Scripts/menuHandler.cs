@@ -10,7 +10,6 @@ public class menuHandler : MonoBehaviour
     public Text actionButtonText;
     public Canvas canvas;
     public bool isFinished = false;
-    public bool justStarted = true;
     
     void Awake()
     {
@@ -53,7 +52,6 @@ public class menuHandler : MonoBehaviour
     public void actionButtonClick()
     {
         isFinished = false;
-        justStarted = false;
         StartCoroutine("Fade");
     }
 
