@@ -18,12 +18,7 @@ public class Finished : MonoBehaviour
         {
             if (playerState.HasWrench)
             {
-                print("You have fixed the car safely");
                 menuHandler.Finish();
-            }
-            else
-            {
-                print("You don't have the tools yet to fix me");
             }
         }
     }

@@ -24,7 +24,6 @@ public class PlayerDead : MonoBehaviour
         {
             deadAudio.Play(0);
             StartCoroutine("EndSound");
-            print("player is dead");
             isDead = true;
         }
         

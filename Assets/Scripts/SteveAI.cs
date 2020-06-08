@@ -48,7 +48,6 @@ public class SteveAI : MonoBehaviour
             if (Vector3.Distance(transform.position, flashLightObject.transform.position) < flashFreezeDistance)
             {
                 animator.SetBool("isOn", true);
-                print("Steve freeze");
                 freezeAI.Freeze(animator);
             }
         }
