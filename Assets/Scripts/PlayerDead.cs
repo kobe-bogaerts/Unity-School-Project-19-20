@@ -11,6 +11,7 @@ public class PlayerDead : MonoBehaviour
     public Sprite[] sprites;
     private menuHandler menuHandler;
     public AudioSource deadAudio;
+    private bool isDead = false;
 
     void Start()
     {
@@ -19,9 +20,13 @@ public class PlayerDead : MonoBehaviour
 
     public void Kill()
     {
-        deadAudio.Play(0);
-        StartCoroutine("EndSound");
-        print("player is dead");
+        if (!isDead)
+        {
+            deadAudio.Play(0);
+            StartCoroutine("EndSound");
+            print("player is dead");
+            isDead = true;
+        }
         
     }
 
@@ -40,8 +45,13 @@ public class PlayerDead : MonoBehaviour
 
     IEnumerator EndSound()
     {
-        yield return new WaitForSeconds(1.5f);
-        if(menuHandler != null)
+        while (Camera.main.fieldOfView >= 1)
+        {
+            Camera.main.fieldOfView -= 1;
+            yield return new WaitForSeconds(0.02f);
+        }
+        yield return new WaitForSeconds(0.5f);
+        if (menuHandler != null)
             menuHandler.Dead();
     }
     
