@@ -47,15 +47,15 @@ public class SteveAI : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, flashLightObject.transform.position) < flashFreezeDistance)
             {
-                animator.SetBool("inSightOfPlayer", true);
+                animator.SetBool("isOn", true);
                 print("Steve freeze");
-                freezeAI.Freeze();
+                freezeAI.Freeze(animator);
             }
         }
 
         if (Vector3.Distance(transform.position, playerPos.position) < 1.0f)
         {
-            animator.SetBool("inSightOfPlayer", true);
+            animator.SetBool("Attack", true);
             playerDead.Kill();
         }
     }

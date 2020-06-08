@@ -5,13 +5,13 @@ using UnityEngine.AI;
 
 public class FreezeAI : MonoBehaviour
 {
-    public float freezeduration = 5f;
+    public float freezeduration = 3f;
     public SteveAI steveAI;
     public NavMeshAgent agent;
     private float timer = 0;
     private bool isFrozen = false;
+    private Animator animator;
 
-    // Update is called once per frame
     void Update()
     {
         if (isFrozen)
@@ -29,8 +29,9 @@ public class FreezeAI : MonoBehaviour
         }
     }
 
-    public void Freeze()
+    public void Freeze(Animator a)
     {
+        animator = a;
         steveAI.enabled = false;
         agent.enabled = false;
         isFrozen = true;
@@ -38,6 +39,8 @@ public class FreezeAI : MonoBehaviour
 
     private void unFreeze()
     {
+        if(animator != null)
+            animator.SetBool("isOn", false);
         agent.enabled = true;
         steveAI.enabled = true;
         isFrozen = false;

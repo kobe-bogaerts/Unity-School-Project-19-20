@@ -1538,6 +1538,11 @@ PrefabInstance:
       propertyPath: playerPos
       value: 
       objectReference: {fileID: 1934132604}
+    - target: {fileID: 5320316618125019077, guid: 19043a75704f9c8448b85a7b50dcda6a,
+        type: 3}
+      propertyPath: freezeduration
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5320316618125019078, guid: 19043a75704f9c8448b85a7b50dcda6a,
         type: 3}
       propertyPath: m_Speed
